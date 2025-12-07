@@ -1,10 +1,11 @@
 
 import HeaderBox from '@/components/HeaderBox'
+import RightSideBar from '@/components/RightSideBar';
 import TotalBalanceBox from '@/components/TotalBalanceBox';
 
 const Home = () => {
     
-    const logIn = { PrimeiroNome: 'Matheus'};
+    const logIn = { firstName: 'Matheus', lastName: 'Serafim', email: 'contact@email.com'};
 
     return (
         <section className="home">
@@ -12,7 +13,7 @@ const Home = () => {
                 <header className="home-header">
                     <HeaderBox type="Bem Vindo" 
                         title="Bem Vindo"
-                        user={logIn?.PrimeiroNome || 'Aleatório'}
+                        user={logIn?.firstName || 'Aleatório'}
                         subtext="Gerencie sua conta e informações de maneira fácil"
                     />
 
@@ -23,6 +24,12 @@ const Home = () => {
                     />
                 </header>
             </div> 
+
+            <RightSideBar
+              user={logIn}
+              transactions={[]}
+              banks={[ {}, {}]}
+            />
         </section>
     )
 }
