@@ -1,4 +1,4 @@
-'use client';
+
 
 import MobileNav from "@/components/MobileNav";
 import Sidebar from "@/components/Sidebar";
@@ -17,7 +17,7 @@ export default function RootLayout({
 
      <div className="flex size-full flex-col">
        <div className="root-layout">
-        <Image src="/icons/corvo.svg" width={30} height={30} alt="menu icon" />
+        <Image src="/icons/corvo.svg" width={30} height={30} alt="logo" />
         <div>
           <MobileNav user={loggedIn} />
          </div>
